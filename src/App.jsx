@@ -6,7 +6,7 @@ import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
 import toast from "react-hot-toast";
 import ImageModal from "./components/ImageModal/ImageModal";
-import SearchBr from "./components/SearchBr/SearchBr";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -78,7 +78,7 @@ function App() {
 
   return (
     <div>
-      <SearchBr onSubmit={getSubmitValue} />
+      <SearchBar onSubmit={getSubmitValue} />
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
       {articles.length > 0 && (

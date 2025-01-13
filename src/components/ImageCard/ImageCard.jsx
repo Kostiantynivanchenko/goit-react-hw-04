@@ -12,15 +12,15 @@ const ImageCard = ({ article, openModal }) => {
   }
 
   return (
-    <div
+    <img
+      src={article.urls.small}
+      alt={article.alt_description || "Image"}
       onClick={() => {
         console.log("Image clicked:", article.urls.small);
         openModal(article.urls.regular);
       }}
       style={{ cursor: "pointer" }}
-    >
-      <img src={article.urls.small} alt={article.alt_description || "Image"} />
-    </div>
+    />
   );
 };
 
